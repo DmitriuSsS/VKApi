@@ -16,15 +16,15 @@ def get_parser():
     subparsers = parser_.add_subparsers()
 
     # region get_friend
-    parser_check = subparsers.add_parser('friends', help='Возвращает список друзей указанного пользователя')
-    parser_check.add_argument('-id', '--user_id', type=int, help='id пользователя')
-    parser_check.set_defaults(function=show_friends)
+    parser_get_friends = subparsers.add_parser('friends', help='Возвращает список друзей указанного пользователя')
+    parser_get_friends.add_argument('-id', '--user_id', type=int, help='id пользователя')
+    parser_get_friends.set_defaults(function=show_friends)
     # endregion
 
     # region get_albums
-    parse_archive = subparsers.add_parser('albums', help='Возвращает список альбомов указанного пользователя')
-    parse_archive.add_argument('-id', '--owner_id', type=int, help='id пользователя')
-    parse_archive.set_defaults(function=show_albums)
+    parse_get_albums = subparsers.add_parser('albums', help='Возвращает список альбомов указанного пользователя')
+    parse_get_albums.add_argument('-id', '--owner_id', type=int, help='id пользователя')
+    parse_get_albums.set_defaults(function=show_albums)
     # endregion
 
     return parser_
