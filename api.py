@@ -22,9 +22,9 @@ def get_parser():
     # endregion
 
     # region get_albums
-    parse_get_albums = subparsers.add_parser('albums', help='Возвращает список альбомов указанного пользователя')
-    parse_get_albums.add_argument('-id', '--owner_id', type=int, help='id пользователя')
-    parse_get_albums.set_defaults(function=show_albums)
+    parser_get_albums = subparsers.add_parser('albums', help='Возвращает список альбомов указанного пользователя')
+    parser_get_albums.add_argument('-id', '--owner_id', type=int, help='id пользователя')
+    parser_get_albums.set_defaults(function=show_albums)
     # endregion
 
     return parser_
